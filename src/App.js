@@ -18,7 +18,7 @@ function App() {
 
    const fetchItems=async()=>{
 
-     const result=await axios.get(`https://api.unsplash.com/photos?client_id=${accessKey}&per_page=50&query=${query}`)
+     const result=await axios.get(`https://api.unsplash.com/photos?client_id=${accessKey}&per_page=12&query=${query}`)
 
     
      setItems(result.data)
@@ -36,7 +36,7 @@ function App() {
 
     const searchItems=async()=>{
  
-      const result=await axios.get(`https://api.unsplash.com/search/photos?client_id=${accessKey}&per_page=50&query=${query}`)
+      const result=await axios.get(`https://api.unsplash.com/search/photos?client_id=${accessKey}&per_page=12&query=${query}`)
  
       
       setItems(result.data.results)
